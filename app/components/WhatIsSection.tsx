@@ -92,13 +92,12 @@ const CanadaEligibilityPremium = () => {
 
   const scrollToForm = () => {
 
-    const formSection = document.querySelector("#form");
-
+const formSection = document.querySelector("#lead-form");
     if (formSection) {
 
       formSection.scrollIntoView({
         behavior: "smooth",
-        block: "center",
+      
       });
 
     }

@@ -70,22 +70,33 @@ const CanadaPRSteps: React.FC = () => {
 
             {/* CTA Button */}
             <div className="mt-10">
-              <button className="bg-[#ff6b00] hover:bg-[#e65f00] text-white font-semibold text-base px-8 py-4 rounded-full transition-colors duration-200">
-                Get Your Process Roadmap
-              </button>
+              <button
+  onClick={() => {
+    document
+      .getElementById("lead-form")
+      ?.scrollIntoView({
+        behavior: "smooth",
+      });
+  }}
+  className="bg-[#ff6b00] hover:bg-[#e65f00] text-white font-semibold text-base px-8 py-4 rounded-full transition-colors duration-200"
+>
+  Get Your Process Roadmap
+</button>
             </div>
           </div>
 
           {/* RIGHT COLUMN — Image */}
-          <div className="flex-1 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[480px] h-[480px]">
-              <Image
-                src="/canada-pr-apply.png"
-                alt="3 Steps to Apply for Canada PR Visa"
-                fill
-                className="object-contain"
-                unoptimized
-              />
+<div className="flex-1 flex justify-center lg:justify-end mt-8 lg:mt-0">
+
+  <div className="relative w-[260px] h-[260px] sm:w-[340px] sm:h-[340px] md:w-[420px] md:h-[420px] lg:w-full lg:max-w-[480px] lg:h-[480px] mx-auto">
+
+    <Image
+      src="/canada-pr-apply.png"
+      alt="3 Steps to Apply for Canada PR Visa"
+      fill
+      className="object-contain"
+      unoptimized
+    />
             </div>
           </div>
         </div>

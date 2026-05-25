@@ -55,18 +55,27 @@ const TrustedVisaSection: React.FC = () => {
 
           {/* Button */}
           <button
-            onClick={scrollToTop}
+            onClick={() => {
+              document
+                .getElementById("lead-form")
+                ?.scrollIntoView({
+                  behavior: "smooth",
+                });
+            }}
             className="relative overflow-hidden inline-block px-6 py-3 mt-6 rounded-md font-semibold text-white bg-orange-500 group"
           >
-            <span className="relative z-10">Explore Canada PR</span>
+            <span className="relative z-10">
+              Explore Canada PR
+            </span>
 
             <span className="absolute inset-0 bg-sky-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
           </button>
+
         </motion.div>
 
         {/* RIGHT SIDE - SCREENSHOT STYLE */}
         <motion.div
-          className="relative w-full h-[520px] hidden lg:block"
+          className="relative w-full h-[420px] md:h-[480px] lg:h-[520px] block"
           initial={{ opacity: 0, x: 150 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
@@ -74,7 +83,7 @@ const TrustedVisaSection: React.FC = () => {
         >
           {/* Top Card */}
           <div className="absolute top-0 left-0 bg-white p-3 shadow-md z-20">
-            <div className="relative w-[300px] h-[220px]">
+           <div className="relative w-[240px] h-[180px] sm:w-[280px] sm:h-[210px] md:w-[300px] md:h-[220px]">
               <Image
                 src="/team.jpg"
                 alt="Team"
@@ -86,8 +95,7 @@ const TrustedVisaSection: React.FC = () => {
           </div>
 
           {/* Bottom Card */}
-          <div className="absolute top-[180px] left-[180px] bg-white p-3 shadow-md z-10">
-            <div className="relative w-[360px] h-[260px]">
+<div className="absolute top-[140px] sm:top-[160px] md:top-[180px] left-[20px] sm:left-[40px] md:left-[120px] lg:left-[180px] bg-white p-3 shadow-md z-10">           <div className="relative w-[260px] h-[200px] sm:w-[320px] sm:h-[230px] md:w-[360px] md:h-[260px]">
               <Image
                 src="/flag.jpg"
                 alt="Flag"

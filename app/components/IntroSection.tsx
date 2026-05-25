@@ -121,19 +121,36 @@ const IntroSection = () => {
             <div className="flex flex-wrap gap-4 mt-2">
 
               <a
-                href="#form"
-                className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-2xl font-bold shadow-xl transition-all duration-300"
-              >
-                Start Your Application
+  href="#"
+  onClick={(e) => {
+    e.preventDefault();
 
+    document
+      .getElementById("lead-form")
+      ?.scrollIntoView({
+        behavior: "smooth",
+      });
+  }}
+  className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-2xl font-bold shadow-xl transition-all duration-300"
+>
+  Start Your Application
                 <ArrowRight className="w-5 h-5" />
               </a>
 
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 border border-slate-200 hover:border-orange-400 hover:text-orange-500 px-8 py-4 rounded-2xl font-semibold text-slate-700 transition-all duration-300"
-              >
-                Explore Benefits
+             <a
+  href="#"
+  onClick={(e) => {
+    e.preventDefault();
+
+    document
+      .getElementById("lead-form")
+      ?.scrollIntoView({
+        behavior: "smooth",
+      });
+  }}
+  className="inline-flex items-center gap-2 border border-slate-200 hover:border-orange-400 hover:text-orange-500 px-8 py-4 rounded-2xl font-semibold text-slate-700 transition-all duration-300"
+>
+  Explore Benefits
               </a>
 
             </div>

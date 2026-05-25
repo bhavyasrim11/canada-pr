@@ -40,7 +40,7 @@ const [phone, setPhone] = useState("");
   const scrollToForm = () => {
     formRef.current?.scrollIntoView({
       behavior: "smooth",
-      block: "center",
+     
     });
   };
 
@@ -175,10 +175,11 @@ const [phone, setPhone] = useState("");
             <div className="absolute -top-8 right-0 w-36 h-36 bg-orange-200 rounded-full blur-3xl opacity-30" />
 
             {/* FORM */}
-            <div
-              ref={formRef}
-              className="relative w-full max-w-[470px] bg-gradient-to-br from-[#ff7b00] to-[#f7b15f] rounded-[26px] p-4 md:p-5 shadow-[0_20px_50px_rgba(0,0,0,0.15)]"
-            >
+           <div
+  id="lead-form"
+  ref={formRef}
+  className="relative w-full max-w-[470px] bg-gradient-to-br from-[#ff7b00] to-[#f7b15f] rounded-[26px] p-4 md:p-5 shadow-[0_20px_50px_rgba(0,0,0,0.15)]"
+>
 
               {/* TITLE */}
               <h2 className="text-white text-center text-[18px] sm:text-[20px] md:text-[24px] font-black leading-tight">
